@@ -19,11 +19,15 @@
     "@uniswap/v2-core": "1.0.0"
   },
   "devDependencies": {
+    "@ethereum-waffle/mock-contract": "^3.2.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "ethereum-waffle": "^2.4.1",
     "ethereumjs-util": "^6.2.0",
+    "hardhat": "^2.0.6",
     "mocha": "^6.2.2",
     "ncp": "^2.0.0",
     "prettier": "^1.19.1",
@@ -42,7 +46,11 @@
     "postcompile": "yarn copy-v1-artifacts",
     "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "dev": "npx hardhat run scripts/deploy-script.js --network localhost",
+    "ropsten": "npx hardhat run scripts/deploy-script.js --network ropsten",
+    "main": "npx hardhat run scripts/main-script.js --network main",
+    "hh": "npx hardhat node"
   },
   "license": "GPL-3.0-or-later"
 }

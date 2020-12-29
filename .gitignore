@@ -1,2 +1,12 @@
-build/
 node_modules/
+build/
+
+node_modules
+
+#Hardhat files
+cache
+artifacts
+
+# yarn 
+yarn-error.log
+yarn.lock
